@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chamber of Commerce</title>
+<!-- Standard Google Font Link for Inter (No Tailwind) -->
+<link href="https://www.google.com/search?q=https://fonts.googleapis.com/css2%3Ffamily%3DInter:wght%40400%3B600%3B700%26display%3Dswap" rel="stylesheet">
+
+<!-- External Stylesheet Link -->
+<link rel="stylesheet" href="styles/styles.css">
+<script type="module" src="script/scripts.js" defer></script>
+
+
+</head>
+<body class="page-body">
+
+<!-- Dynamic Banner -->
+<div id="join-us-banner" class="hidden join-banner">
+    🤝 Come join us for the Chamber Meet and Greet on Wednesday at 7:00 p.m.!
+</div>
+
+<!-- Header -->
+<header class="site-header">
+    <div class="header-container">
+        <div class="logo-group">
+            <svg class="logo-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+            <span class="logo-text">Chamber of Commerce</span>
+        </div>
+
+        <nav class="desktop-nav">
+            <a href="#" class="nav-link">Home</a>
+            <a href="#" class="nav-link">Directory</a>
+            <a href="#" class="nav-link">Join</a>
+            <a href="#" class="nav-link">Discover</a>
+            <button class="icon-btn">
+                <svg class="icon-btn-svg" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+            </button>
+        </nav>
+
+        <button id="menu-button" class="mobile-btn">
+            <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+            <svg class="close-icon hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+        </button>
+    </div>
+    <nav id="mobile-menu" class="mobile-nav hidden">
+        <div class="mobile-nav-content">
+            <a href="#" class="mobile-nav-link">Home</a>
+            <a href="#" class="mobile-nav-link">Directory</a>
+            <a href="#" class="mobile-nav-link">Join</a>
+            <a href="#" class="mobile-nav-link">Discover</a>
+        </div>
+    </nav>
+</header>
+
+<!-- Main Content -->
+<main class="main-layout">
+    <section class="hero-section">
+        <div class="hero-banner-text">Keynote Tickets</div>
+    </section>
+
+    <h1 class="main-title">Home</h1>
+
+    <section class="grid-3-col">
+        <!-- Events Card -->
+        <div class="info-card event-card">
+            <h2 class="card-title">Events</h2>
+            <ul class="card-list">
+                <li><strong class="card-list-strong">October 25:</strong> Business Workshop</li>
+                <li><strong class="card-list-strong">November 1:</strong> Networking Mixer</li>
+                <li><strong class="card-list-strong">November 15:</strong> Annual Gala</li>
+            </ul>
+        </div>
+
+        <!-- Current Weather Card -->
+        <div class="info-card">
+            <h2 class="card-title">Current Weather</h2>
+            <div class="weather-temp-group">
+                <svg class="weather-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                <span class="weather-temp">75°F</span>
+            </div>
+            <p class="weather-detail-lg">Party Cloudy</p>
+            <p class="weather-detail-sm">High: 85° Low: 52°</p>
+            <p class="weather-detail-sm">Humidity: 34%</p>
+            <p class="weather-detail-sm">Sunrise: 7:30am</p>
+            <p class="weather-detail-sm">Sunset: 8:59pm</p>
+        </div>
+
+        <!-- Weather Forecast Card -->
+        <div class="forecast-box">
+            <h2 class="card-title">Weather Forecast</h2>
+            <p class="forecast-text">Today: <strong class="forecast-strong">90°F</strong></p>
+            <p class="forecast-text">Wednesday: <strong class="forecast-strong">89°F</strong></p>
+            <p class="forecast-text">Thursday: <strong class="forecast-strong">68°F</strong></p>
+        </div>
+    </section>
+
+    <section class="grid-3-col">
+        <!-- Business Items -->
+        <div class="info-card business-card">
+            <div class="business-placeholder">
+                <svg class="business-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+            </div>
+            <h3 class="business-title">Business Name</h3>
+            <p class="business-tagline">Business Tag Line</p>
+            <p>EMAIL: info@gmail.com</p>
+            <p>PHONE: 800-555-1234</p>
+            <p>URL: mybusiness.com</p>
+        </div>
+        <div class="info-card business-card">
+            <div class="business-placeholder">
+                <svg class="business-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+            </div>
+            <h3 class="business-title">Business Name</h3>
+            <p class="business-tagline">Business Tag Line</p>
+            <p>EMAIL: info@gmail.com</p>
+            <p>PHONE: 800-555-1234</p>
+            <p>URL: mybusiness.com</p>
+        </div>
+        <div class="info-card business-card">
+            <div class="business-placeholder">
+                <svg class="business-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+            </div>
+            <h3 class="business-title">Business Name</h3>
+            <p class="business-tagline">Business Tag Line</p>
+            <p>EMAIL: info@gmail.com</p>
+            <p>PHONE: 800-555-1234</p>
+            <p>URL: mybusiness.com</p>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="site-footer">
+    <div class="footer-content">
+        <div class="footer-contact">
+            <h3 class="footer-title"> Chamber of Commerce</h3>
+            <p>Taguig City,</p>
+            <p>Manila, Philippines</p>
+            <p>info@c.org</p>
+            <p>(223) 555-2300</p>
+        </div>
+
+        <div class="footer-social">
+            <a href="#" aria-label="YouTube" class="social-link"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0A2.057 2.057 0 002 5.253v13.59c0 1.137.915 2.053 2.052 2.053h15.897c1.136 0 2.051-.916 2.051-2.053V5.253a2.057 2.057 0 00-2.052-2.069zM9.46 15.65v-7.3l5.58 3.65-5.58 3.65z"/></svg></a>
+            <a href="#" aria-label="Twitter" class="social-link"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.297 2.587c1.455-.424 2.993-.666 4.582-.666 4.27 0 7.854 2.872 9.077 6.843-.728.324-1.485.572-2.26.74-.698-.752-1.66-1.226-2.735-1.226-2.056 0-3.72 1.664-3.72 3.72 0 .29.034.57.098.835-3.09-.155-5.83-1.636-7.664-3.895-.31.53-.487 1.144-.487 1.804 0 1.29.657 2.433 1.657 3.09-1.077-.034-2.088-.329-2.97-.818-.002.015-.002.03-.002.045 0 1.803 1.285 3.308 2.99 3.65-.312.085-.64.129-.98.129-.24 0-.472-.023-.699-.067.475 1.48 1.854 2.558 3.49 2.587-1.272 1.0-2.87 1.602-4.616 1.602-.3 0-.594-.018-.883-.052 1.64 1.05 3.585 1.663 5.687 1.663 6.824 0 10.554-5.645 10.554-10.554 0-.16-.004-.32-.01-.48 1.09-.79 2.03-1.78 2.77-2.906-.99.44-2.05.736-3.15.877z"/></svg></a>
+            <a href="#" aria-label="LinkedIn" class="social-link"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.325-.028-3.037-1.858-3.037-1.869 0-2.151 1.448-2.151 2.936v5.67H9.27c0 0 .04-9.729 0-10.738h3.557v1.595h.05c.447-.79 1.549-1.624 3.426-1.624 3.666 0 4.34 2.417 4.34 5.566v6.082zM3.704 6.13a2.164 2.164 0 01-2.163-2.165c0-1.192.97-2.163 2.163-2.163 1.192 0 2.164.97 2.164 2.163 0 1.192-.972 2.165-2.164 2.165zM1.806 20.452h3.791V9.71H1.806v10.742z"/></svg></a>
+        </div>
+
+        <div class="footer-meta">
+            <p class="text-sm">WDD231 Class Project</p>
+            <p class="text-sm">Karel Earl P. Ignacio</p>
+            <p>&copy; <span id="current-year"></span> Philippines Chamber of Commerce</p>
+            <p>Last Modification: <span id="generation-date"></span></p>
+        </div>
+    </div>
+</footer>
+
+<!-- External JavaScript Link -->
+<script src="script/scripts.js"></script>
+
+
+</body>
+</html>
