@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stellar City Chamber of Commerce | Directory</title>
+    <meta name="description" content="Official directory of businesses in Stellar City Chamber of Commerce. Find local member information, contact details, and more.">
+    <meta name="author" content="Karel Earl Ignacio">
+    <link rel="icon" href="images/logo.png">
+    <meta property="og:title" content="Stellar City Chamber Directory">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://d0dge1003.github.io/wdd231/chamber/images/og-image.webp">
+    <meta property="og:url" content="https://d0dge1003.github.io/wdd231/chamber/directory.html">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="images/logo.png" alt="Stellar City Chamber Logo">
+            <h1>Stellar City Chamber</h1>
+        </div>
+        <button id="menu" aria-label="Toggle Navigation Menu"></button>
+        <nav>
+            <ul class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html" class="active">Directory</a></li>
+                <li><a href="join.html">Join Us</a></li>
+                <li><a href="events.html">Events</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="directory-main">
+        <h2>Member Directory</h2>
+        <div class="view-toggles">
+            <button id="grid" class="view-btn" aria-label="Grid View">
+                <span class="icon-grid"></span> Grid
+            </button>
+            <button id="list" class="view-btn" aria-label="List View">
+                <span class="icon-list"></span> List
+            </button>
+        </div>
+        <div id="member-cards" class="member-grid">
+        </div>
+    </main>
+    <footer>
+        <div class="contact-info">
+            <p>Stellar City Chamber</p>
+            <p>555 Galaxy Way, Stellar City, 90001</p>
+            <p>(555) 555-CITY</p>
+            <p><a href="mailto:info@stellar.org">info@stellar.org</a></p>
+        </div>
+        <div class="development-info">
+            <p>&copy; <span id="currentyear"></span> Stellar City Chamber</p>
+            <p>Karel Ignacio | WDD 231</p>
+            <p>Last Modified: <span id="lastmodified"></span></p>
+        </div>
+    </footer>
+    <script src="scripts/scripts.js"></script>
+</body>
+</html>
