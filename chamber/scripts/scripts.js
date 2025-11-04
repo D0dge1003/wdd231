@@ -1,4 +1,12 @@
-
+const memberData = [
+  {"name": "Stellar Dynamics", "address": "101 Nebula Way, Stellar City", "phone": "555-123-4567", "website": "https://stellardynamics.com", "imagefile": "stellar.webp", "membership": 3, "description": "Leading aerospace technology and innovation since 2050."},
+  {"name": "Astro Cafe", "address": "42 Comet Street, Stellar City", "phone": "555-987-6543", "website": "https://astrocafe.com", "imagefile": "astro.webp", "membership": 1, "description": "Local coffee and pastries, promoting interstellar tranquility."},
+  {"name": "Orbit Logistics", "address": "202 Launch Pad, Stellar City", "phone": "555-333-2222", "website": "https://orbitlogistics.net", "imagefile": "orbit.webp", "membership": 2, "description": "Global supply chain specialists with a focus on fast transport."},
+  {"name": "Cosmic Arts Studio", "address": "77 Galaxy Ave, Stellar City", "phone": "555-444-5555", "website": "https://cosmicarts.org", "imagefile": "cosmic.webp", "membership": 1, "description": "Gallery and art classes celebrating the cosmic wonders."},
+  {"name": "Zenith Bank", "address": "500 Horizon Blvd, Stellar City", "phone": "555-666-7777", "website": "https://zenithbank.com", "imagefile": "zenith.webp", "membership": 3, "description": "Premier financial services and intergalactic investment firm."},
+  {"name": "Nova Fitness", "address": "11 Star Lane, Stellar City", "phone": "555-111-0000", "website": "https://novafit.com", "imagefile": "nova.webp", "membership": 2, "description": "Modern gymnasium and training facility for peak performance."},
+  {"name": "Luna Travel Agency", "address": "33 Crater Road, Stellar City", "phone": "555-222-9999", "website": "https://lunatravel.net", "imagefile": "luna.webp", "membership": 1, "description": "Customized space tours and planetary excursions."}
+];
 const menuButton = document.querySelector('#menu');
 const navigation = document.querySelector('nav');
 const memberContainer = document.querySelector('#member-cards');
@@ -69,9 +77,7 @@ const displayMembers = (members) => {
 };
 const fetchMembers = async () => {
     try {
-        const response = await fetch('members.json'); 
-        const members = await response.json(); 
-        
+        const members = memberData;
         displayMembers(members);
     } catch (error) {
         console.error('Error fetching member data:', error);
