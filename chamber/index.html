@@ -66,12 +66,13 @@
         <section class="weather-section card">
             <h3>Local Weather</h3>
             <div class="current-weather">
+                <div id="weather-icon-svg" class="weather-icon-container"></div>
                 <p><span id="current-temp">--</span> &deg;F</p>
                 <p class="weather-desc-text"><span id="weather-desc">--</span></p>
             </div>
             <h4>3-Day Forecast</h4>
             <div class="forecast-grid" id="forecast-container">
-                </div>
+            </div>
         </section>
 
         <section class="mission card">
@@ -82,7 +83,7 @@
         <section class="spotlights-section">
             <h3>⭐ Member Spotlights ⭐</h3>
             <div id="spotlights-container" class="spotlights-grid">
-                </div>
+            </div>
         </section>
 
     </main>
@@ -92,8 +93,8 @@
         <p>Last Modified: <span id="lastmodified"></span></p>
     </footer>
 
-    <script src="scripts/weather.js"></script>
-    <script src="scripts/spotlights.js"></script>
-    <script src="scripts/main.js"></script> 
+    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/spotlights.js" defer></script>
+    <script src="scripts/main.js" defer></script> 
 </body>
 </html>
