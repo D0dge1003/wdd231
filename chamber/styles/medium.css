@@ -1,5 +1,5 @@
 @media (min-width: 500px) {
-    /* HEADER FIX (unchanged) */
+
     header {
         display: flex;
         justify-content: space-between; 
@@ -26,11 +26,11 @@
         padding: 0.5rem 1rem;
     }
     
-    /* MAIN GRID LAYOUT (unchanged) */
+   
     main {
         grid-template-columns: 2fr 1fr;
         gap: 1.5rem;
-        max-width: 960px; /* Slightly wider content area for tablets */
+        max-width: 960px; 
     }
     
     .events-section { grid-area: 1 / 1 / 2 / 2; }

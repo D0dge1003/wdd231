@@ -1,7 +1,6 @@
-// --- CRITICAL: REPLACE THESE PLACEHOLDERS WITH YOUR REAL DATA ---
 const API_KEY = "a1b2c3d4e5f6g7h8i9j0k1l2";
-const CHAMBER_LAT = "33.1581"; // Example Latitude
-const CHAMBER_LON = "-117.3506"; // Example Longitude
+const CHAMBER_LAT = "33.1581"; 
+const CHAMBER_LON = "-117.3506"; 
 
 const CURRENT_TEMP_URL = `https://api.openweathermap.org/data/2.5/weather?lat=${CHAMBER_LAT}&lon=${CHAMBER_LON}&units=imperial&appid=${API_KEY}`;
 const FORECAST_URL = `https://api.openweathermap.org/data/2.5/forecast?lat=${CHAMBER_LAT}&lon=${CHAMBER_LON}&units=imperial&appid=${API_KEY}`;
@@ -13,15 +12,12 @@ async function getWeather() {
             fetch(FORECAST_URL)
         ]);
         
-        // --- CRITICAL CHECK ---
         if (!currentResponse.ok) {
             console.error(`Weather API Error: Status ${currentResponse.status}. Check API Key and URL.`);
-            // Display static error message on the page
             document.getElementById('current-temp').textContent = 'N/A';
             document.getElementById('weather-desc').textContent = 'API Error';
-            return; // Stop execution
+            return; 
         }
-        // ----------------------
         
         const dataCurrent = await currentResponse.json();
         const dataForecast = await forecastResponse.json();
@@ -35,7 +31,7 @@ async function getWeather() {
 }
 
 function displayCurrentWeather(data) {
-    if (data.main) { // Check if data is valid
+    if (data.main) { 
         const temp = Math.round(ta.main.temp);
         const desc = data.weather[0].description.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
         const iconCode = data.weather[0].icon;
@@ -58,7 +54,6 @@ function displayForecast(data) {
     const forecastDays = [];
     const uniqueDays = new Set();
     
-    // Find the next 3 days at approximately noon
     for (const item of data.list) {
         const date = new Date(item.dt * 1000);
         const dayKey = date.toISOString().split('T')[0];

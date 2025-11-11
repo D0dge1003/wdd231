@@ -1,10 +1,10 @@
 :root {
-    --primary-color: #3B82F6;      /* Vibrant Blue */
-    --secondary-color: #1F2937;    /* Dark Card/Header background */
-    --accent-light: #F9FAFB;       /* Near White (Main Text Color) */
+    --primary-color: #3B82F6;     
+    --secondary-color: #1F2937;    
+    --accent-light: #F9FAFB;      
     --text-dark: #F9FAFB;
     --text-light: #9CA3AF;
-    --background-page: #030712;    /* Deep Black/Blue (Main Page Background) */
+    --background-page: #030712;    
     --shadow-subtle: 0 4px 10px rgba(0, 0, 0, 0.4); 
 }
 
@@ -78,23 +78,21 @@ header {
     background-color: rgba(255, 255, 255, 0.1);
 }
 #main-nav a.current {
-    background-color: var(--primary-color);
-    color: var(--accent-light);
+    background-color: var(--secondary-color); 
+    color: var(--primary-color); 
 }
 
-/* --- HERO WRAPPER & SECTION (FULL-WIDTH & FADE-DOWN) --- */
 .hero-wrapper {
-    /* Ensures the hero spans full width of the viewport */
     width: 100vw; 
-    margin-left: calc(50% - 50vw); /* Centers it and makes it full width */
-    position: relative; /* For absolute positioning of the hero section */
-    overflow: hidden; /* Important to prevent horizontal scroll from margin-left trick */
-    margin-bottom: 2rem; /* Spacing below the hero */
+    margin-left: calc(50% - 50vw); 
+    position: relative; 
+    overflow: hidden; 
+    margin-bottom: 2rem; 
 }
 
 .hero {
-    position: relative; /* For the pseudo-element overlay */
-    min-height: 400px; /* Increased height for impact */
+    position: relative; 
+    min-height: 400px; 
     background-image: url('../images/hero-city-medium.webp'); 
     background-size: cover; 
     background-position: center;
@@ -102,36 +100,34 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%; /* Hero fills its wrapper */
+    width: 100%; 
 }
 
-/* Fade Down Effect using a pseudo-element */
 .hero::after {
     content: '';
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 100px; /* Height of the fade effect */
-    /* Gradient from transparent to the page background color */
+    height: 100px; 
     background: linear-gradient(to top, var(--background-page) 0%, transparent 100%);
-    pointer-events: none; /* Allows clicks through the fade */
+    pointer-events: none; 
 }
 
 .hero-overlay {
     background: rgba(3, 7, 18, 0.85); 
     color: var(--accent-light);
-    padding: 2.5rem 4rem; /* Larger padding for impact */
+    padding: 2.5rem 4rem; 
     border-radius: 10px;
     text-align: center;
     max-width: 90%; 
     box-shadow: 0 4px 20px rgba(59, 130, 246, 0.5); 
     border: 1px solid var(--primary-color);
-    z-index: 2; /* Ensures overlay is above the fade effect */
+    z-index: 2; 
 }
 .hero-overlay h2 {
     color: var(--primary-color);
-    font-size: 2.8rem; /* Even larger for stronger impact */
+    font-size: 2.8rem; 
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
     margin-bottom: 1rem;
 }
@@ -141,7 +137,7 @@ header {
     display: inline-block;
     background-color: var(--primary-color);
     color: var(--accent-light);
-    padding: 0.9rem 2rem; /* Larger for clickability */
+    padding: 0.9rem 2rem;
     text-decoration: none;
     border-radius: 4px;
     font-weight: 700;
@@ -162,8 +158,8 @@ main {
     display: grid; 
     grid-template-columns: 1fr;
     gap: 1.5rem;
-    max-width: 90%; /* Keep content centered and readable on smaller screens */
-    margin: 0 auto; /* Center the grid content */
+    max-width: 90%; 
+    margin: 0 auto; 
 }
 
 .card {
@@ -173,16 +169,14 @@ main {
     padding: 1.5rem;
     box-shadow: var(--shadow-subtle);
     transition: box-shadow 0.3s ease, transform 0.2s ease;
-    color: var(--text-light); /* Card text is light */
+    color: var(--text-light); 
 }
 .card:hover {
     box-shadow: 0 8px 25px rgba(59, 130, 246, 0.25);
     transform: translateY(-2px);
 }
 .card p {
-    color: var(--text-light); /* Ensure all card paragraph text is light */
-}
-h3 {
+    color: var(--text-light); 
     color: var(--primary-color);
     font-size: 1.4rem;
     margin-bottom: 0.75rem;
