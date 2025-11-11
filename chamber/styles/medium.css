@@ -1,0 +1,46 @@
+@media (min-width: 500px) {
+    /* HEADER FIX (unchanged) */
+    header {
+        display: flex;
+        justify-content: space-between; 
+        align-items: center; 
+        padding: 1rem 2rem;
+    }
+    .header-content {
+        display: block; 
+    }
+    #menu-toggle {
+        display: none;
+    }
+    #main-nav {
+        display: block !important;
+        width: auto;
+    }
+    #main-nav ul {
+        display: flex;
+        justify-content: flex-end;
+    }
+    #main-nav a {
+        border-bottom: none;
+        border-left: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 0.5rem 1rem;
+    }
+    
+    /* MAIN GRID LAYOUT (unchanged) */
+    main {
+        grid-template-columns: 2fr 1fr;
+        gap: 1.5rem;
+        max-width: 960px; /* Slightly wider content area for tablets */
+    }
+    
+    .events-section { grid-area: 1 / 1 / 2 / 2; }
+    .weather-section { grid-area: 1 / 2 / 2 / 3; }
+    .mission { grid-area: 2 / 1 / 3 / 3; }
+    .spotlights-section { grid-area: 3 / 1 / 4 / 3; }
+
+    .spotlights-grid {
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 1rem;
+    }
+}

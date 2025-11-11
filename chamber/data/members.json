@@ -1,0 +1,67 @@
+{
+  "members": [
+    {
+      "name": "Stellar Dynamics",
+      "address": "101 Nebula Way, Stellar City",
+      "phone": "555-123-4567",
+      "website": "https://stellardynamics.com",
+      "logo": "images/logos/stellar.webp",
+      "membershipLevel": "Gold", 
+      "description": "Leading aerospace technology and innovation since 2050."
+    },
+    {
+      "name": "Astro Cafe",
+      "address": "42 Comet Street, Stellar City",
+      "phone": "555-987-6543",
+      "website": "https://astrocafe.com",
+      "logo": "images/logos/astro.webp",
+      "membershipLevel": "Bronze",
+      "description": "Local coffee and pastries, promoting interstellar tranquility."
+    },
+    {
+      "name": "Orbit Logistics",
+      "address": "202 Launch Pad, Stellar City",
+      "phone": "555-333-2222",
+      "website": "https://orbitlogistics.net",
+      "logo": "images/logos/orbit.webp",
+      "membershipLevel": "Silver",
+      "description": "Global supply chain specialists with a focus on fast transport."
+    },
+    {
+      "name": "Cosmic Arts Studio",
+      "address": "77 Galaxy Ave, Stellar City",
+      "phone": "555-444-5555",
+      "website": "https://cosmicarts.org",
+      "logo": "images/logos/cosmic.webp",
+      "membershipLevel": "Bronze",
+      "description": "Gallery and art classes celebrating the cosmic wonders."
+    },
+    {
+      "name": "Zenith Bank",
+      "address": "500 Horizon Blvd, Stellar City",
+      "phone": "555-666-7777",
+      "website": "https://zenithbank.com",
+      "logo": "images/logos/zenith.webp",
+      "membershipLevel": "Gold",
+      "description": "Premier financial services and intergalactic investment firm."
+    },
+    {
+      "name": "Nova Fitness",
+      "address": "11 Star Lane, Stellar City",
+      "phone": "555-111-0000",
+      "website": "https://novafit.com",
+      "logo": "images/logos/nova.webp",
+      "membershipLevel": "Silver",
+      "description": "Modern gymnasium and training facility for peak performance."
+    },
+    {
+      "name": "Luna Travel Agency",
+      "address": "33 Crater Road, Stellar City",
+      "phone": "555-222-9999",
+      "website": "https://lunatravel.net",
+      "logo": "images/logos/luna.webp",
+      "membershipLevel": "Bronze",
+      "description": "Customized space tours and planetary excursions."
+    }
+  ]
+}

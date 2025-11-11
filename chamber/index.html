@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thriving City Chamber of Commerce | Home</title>
+    <meta name="description" content="Official home page for the Thriving City Chamber of Commerce.">
+    
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/medium.css" media="(min-width: 500px)">
+    <link rel="stylesheet" href="styles/large.css" media="(min-width: 1000px)">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <header>
+        <div class="header-content"> 
+            <h1 class="chamber-title">Stellar City Chamber</h1>
+            <button id="menu-toggle" aria-expanded="false" aria-controls="main-nav">☰</button>
+        </div>
+        
+        <nav id="main-nav">
+            <ul>
+                <li><a href="index.html" class="current">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="hero-wrapper">
+        <section class="hero">
+            <div class="hero-overlay">
+                <h2>Empowering Local Business</h2>
+                <a href="join.html" class="cta-button" aria-label="Join the Thriving City Chamber of Commerce">
+                    Join Today!
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <main class="home-grid">
+        <section class="events-section card">
+            <h3>🗓️ Upcoming Events</h3>
+            <div class="event-item">
+                <h4>Annual Gala Dinner</h4>
+                <p><strong>Nov 20th</strong> | Grand Hotel Ballroom</p>
+                <p>Celebrate a year of community and commerce! Tickets available now.</p>
+            </div>
+        </section>
+
+        <section class="weather-section card">
+            <h3>Local Weather</h3>
+            <div class="current-weather">
+                <img id="weather-icon" src="" alt="Weather icon placeholder" loading="lazy">
+                <p><span id="current-temp">--</span> &deg;F</p>
+                <p class="weather-desc-text"><span id="weather-desc">--</span></p>
+            </div>
+            <h4>3-Day Forecast</h4>
+            <div class="forecast-grid" id="forecast-container">
+                </div>
+        </section>
+
+        <section class="mission card">
+            <h3>🤝 Our Mission</h3>
+            <p>To promote a thriving economic environment and a high quality of life for all residents and businesses in Thriving City.</p>
+        </section>
+
+        <section class="spotlights-section">
+            <h3>⭐ Member Spotlights ⭐</h3>
+            <div id="spotlights-container" class="spotlights-grid">
+                </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Thriving City Chamber</p>
+        <p>Last Modified: <span id="lastmodified"></span></p>
+    </footer>
+
+    <script src="scripts/weather.js"></script>
+    <script src="scripts/spotlights.js"></script>
+    <script src="scripts/main.js"></script> 
+</body>
+</html>
