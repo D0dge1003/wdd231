@@ -2,57 +2,6 @@
 
 /* NOTE: Global selectors (:root, body, header, main, footer) are now in base.css */
 
-/* Hero Banner Section Styles */
-.hero-banner {
-    position: relative;
-    height: 400px; 
-    background: 
-        linear-gradient(to bottom, rgba(13, 13, 26, 0.8) 0%, rgba(13, 13, 26, 0.0) 50%, rgba(13, 13, 26, 0.8) 100%), 
-        url('../images/city-sunset.jpg') no-repeat center center/cover; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: var(--light-color);
-    margin-bottom: 2rem;
-    overflow: hidden;
-    width: 100%; 
-}
-
-.hero-content {
-    background-color: rgba(26, 26, 46, 0.8);
-    padding: 3rem 4rem;
-    border-radius: var(--border-radius);
-    box-shadow: var(--card-shadow);
-    max-width: 800px;
-    color: var(--light-color);
-}
-
-.hero-content h2 {
-    font-size: 3rem;
-    color: var(--primary-color);
-    margin-bottom: 1.5rem;
-    text-shadow: 0 0 10px rgba(0, 170, 255, 0.7);
-}
-
-.hero-content .button {
-    display: inline-block;
-    background-color: var(--secondary-color);
-    color: var(--light-color);
-    padding: 0.8rem 2rem;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.1rem;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-.hero-content .button:hover {
-    background-color: var(--primary-color);
-    transform: translateY(-2px) scale(1.02);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
-}
 
 /* Join Page Specific Styles: Membership Cards */
 .join-page h2 {
