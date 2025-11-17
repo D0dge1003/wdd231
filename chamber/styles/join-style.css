@@ -1,0 +1,446 @@
+/* Color Scheme & Theme Variables */
+:root {
+    --primary-color: #00aaff;
+    --secondary-color: #0080c0;
+    --light-color: #f0f0f0;
+    --dark-color: #1a1a2e;
+    --deep-dark: #0d0d1a;
+    --card-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    --border-radius: 12px;
+}
+
+/* Base Setup and Sticky Footer Implementation */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    /* FIX: Added generic font fallback (Arial/sans-serif) for improved compliance */
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--light-color);
+    background-color: var(--deep-dark);
+    
+    /* Flexbox for Sticky Footer */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header & Navigation */
+header {
+    background-color: var(--dark-color); 
+    color: var(--light-color);
+    padding: 1rem 2rem;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    text-align: left; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    position: relative;
+}
+
+header h1 {
+    font-size: 1.5rem; 
+    color: var(--primary-color);
+    margin: 0; 
+}
+
+header nav ul {
+    list-style: none;
+    display: flex; 
+    padding: 0; 
+}
+
+header nav ul li a {
+    color: var(--light-color);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: block;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+    background-color: var(--primary-color); 
+    color: var(--dark-color);
+    box-shadow: 0 0 8px var(--primary-color);
+}
+
+/* Main Content Area */
+main {
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    
+    flex-grow: 1; 
+    width: 100%; 
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-color);
+    color: #999;
+    text-align: center;
+    padding: 1.5rem;
+    border-top: 1px solid #333;
+}
+
+/* Hero Banner Section Styles */
+.hero-banner {
+    position: relative;
+    height: 400px; 
+    background: 
+        /* Fading effect: dark at top/bottom, clear in the middle */
+        linear-gradient(to bottom, rgba(13, 13, 26, 0.8) 0%, rgba(13, 13, 26, 0.0) 50%, rgba(13, 13, 26, 0.8) 100%), 
+        /* Background Image snippet is here: */
+        url('images/city-sunset.jpg') no-repeat center center/cover; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--light-color);
+    margin-bottom: 2rem;
+    overflow: hidden;
+    width: 100%; 
+}
+
+.hero-content {
+    background-color: rgba(26, 26, 46, 0.8);
+    padding: 3rem 4rem;
+    border-radius: var(--border-radius);
+    /* REMOVED: -webkit-box-shadow, -moz-box-shadow, -khtml-box-shadow */
+    box-shadow: var(--card-shadow);
+    max-width: 800px;
+}
+
+.hero-content h2 {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    text-shadow: 0 0 10px rgba(0, 170, 255, 0.7);
+}
+
+.hero-content .button {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--light-color);
+    padding: 0.8rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.hero-content .button:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Join Page Specific Styles: Membership Cards */
+.join-page h2 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 5px var(--primary-color);
+}
+
+.join-page p {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #ccc;
+}
+
+.membership-info {
+    margin-bottom: 3rem;
+    padding: 1rem;
+    background-color: var(--deep-dark);
+    border-radius: var(--border-radius);
+}
+
+.card-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr;
+    padding-top: 1rem;
+}
+
+.membership-card {
+    background-color: var(--dark-color);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    text-align: center;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    animation: pulse-border 5s infinite alternate;
+
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between; 
+}
+
+/* Membership Card Image Styling */
+.membership-card .level-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1rem;
+    border-radius: 50%; 
+    object-fit: cover;
+    border: 3px solid var(--primary-color);
+    box-shadow: 0 0 10px rgba(0, 170, 255, 0.5); 
+    
+    display: block; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Card Level Borders */
+.np-level { border: 2px solid #6c757d; }
+.bronze-level { border: 2px solid #cd7f32; }
+.silver-level { border: 2px solid #c0c0c0; }
+.gold-level { border: 2px solid gold; }
+
+.membership-card h4 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+}
+
+.membership-card .price {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.membership-card p:not(.price) {
+    flex-grow: 1; 
+    margin-bottom: 1.5rem;
+}
+
+.membership-card button {
+    background-color: var(--secondary-color);
+    color: var(--light-color);
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.1s;
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+.membership-card button:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+/* Form Styles */
+.chamber-form fieldset {
+    border: 1px solid #333;
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    background-color: var(--dark-color);
+    box-shadow: var(--card-shadow);
+}
+
+.chamber-form legend {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    font-weight: bold;
+    padding: 0 1rem;
+}
+
+.chamber-form label {
+    margin-top: 1rem;
+    font-weight: bold;
+    color: #ccc;
+}
+
+.chamber-form input[type="text"],
+.chamber-form input[type="email"],
+.chamber-form input[type="tel"],
+.chamber-form select,
+.chamber-form textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.5rem;
+    padding: 0.8rem;
+    border: 1px solid #333;
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: #2c2c45;
+    color: var(--light-color);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.chamber-form input:focus,
+.chamber-form select:focus,
+.chamber-form textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px var(--primary-color);
+    outline: none;
+}
+
+.chamber-form input[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 1.2rem;
+    background-color: var(--primary-color);
+    color: var(--dark-color);
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s;
+    margin-top: 2rem;
+}
+
+.chamber-form input[type="submit"]:hover {
+    background-color: #00c3ff;
+    transform: scale(1.02);
+}
+
+/* Modal Styles */
+.membership-modal {
+    border: none;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    background-color: var(--dark-color);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+    max-width: 90%;
+    
+    /* Centering Fix for dialog */
+    position: fixed; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0; 
+    z-index: 1000;
+}
+
+/* Modal Backdrop (overlay behind modal) */
+.membership-modal::backdrop {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content h5 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+}
+
+.modal-content li{
+    color: white;
+}
+
+.modal-content ul {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.modal-content button {
+    background-color: #dc3545;
+    color: var(--light-color);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Thank You Page Styles */
+.thankyou-message {
+    text-align: center;
+    padding: 4rem 1rem;
+    background-color: var(--dark-color); 
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); 
+    margin-top: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.thankyou-message h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.thankyou-message p {
+    color: var(--light-color);
+}
+
+.thankyou-data {
+    text-align: left;
+    margin-top: 2rem;
+    display: inline-block;
+    border: 1px solid #333;
+    padding: 1.5rem;
+    border-radius: 4px;
+    background-color: #2c2c45;
+}
+
+.thankyou-data h3 {
+    color: var(--primary-color);
+}
+
+.thankyou-data p {
+    text-align: left;
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+    color: var(--light-color);
+}
+
+/* Keyframe Animation */
+@keyframes pulse-border {
+    0% { transform: scale(1); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); }
+    50% { transform: scale(1.01); box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); }
+    100% { transform: scale(1); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); }
+}
+
+/* Media Queries (Responsiveness) */
+@media (min-width: 768px) {
+    .chamber-form fieldset {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0 1.5rem;
+    }
+
+    .chamber-form legend {
+        grid-column: 1 / -1; 
+    }
+    
+    .chamber-form textarea,
+    .chamber-form input[type="submit"] {
+        grid-column: 1 / -1;
+    }
+
+    .card-grid {
+        /* FIX: Redefinition of grid-template-columns fixed by placing it here */
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 1000px) {
+    .card-grid {
+        /* FIX: Redefinition of grid-template-columns fixed by placing it here */
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}

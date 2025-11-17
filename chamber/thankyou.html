@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You | [Chamber Name]</title>
+    <link rel="stylesheet" href="styles/thankyou.css"> 
+    </head>
+<body>
+    <header>
+        <h1>Stellar City Chamber</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="thankyou-message">
+            <h2>Thank You for Your Application!</h2>
+            <p>Your application has been successfully submitted. We will review it shortly and be in touch.</p>
+
+            <div class="thankyou-data">
+                <h3>Submitted Information:</h3>
+                <p id="t_name"></p>
+                <p id="t_email"></p>
+                <p id="t_phone"></p>
+                <p id="t_orgname"></p>
+                <p id="t_date"></p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 [Chamber Name] | Last Modified: <span id="lastModified"></span></p>
+    </footer>
+
+    <script>
+        // Thank You Page Script to display submitted data
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            
+            // Required fields to display: first name, last name, email address, phone number, business/organization name, and the date from the hidden input.
+            const fname = params.get('fname');
+            const lname = params.get('lname');
+            const email = params.get('email');
+            const phone = params.get('phone');
+            const orgname = params.get('orgname');
+            const date = params.get('form-load-time'); // Hidden timestamp
+
+            document.getElementById('t_name').textContent = `Name: ${fname} ${lname}`;
+            document.getElementById('t_email').textContent = `Email: ${email}`;
+            document.getElementById('t_phone').textContent = `Phone: ${phone}`;
+            document.getElementById('t_orgname').textContent = `Organization: ${orgname}`;
+            
+            // Format the date for readability
+            const submittedDate = date ? new Date(date).toLocaleString() : 'N/A';
+            document.getElementById('t_date').textContent = `Application Date: ${submittedDate}`;
+
+            // Footer last modified date
+            document.getElementById('lastModified').textContent = new Date(document.lastModified).toLocaleDateString('en-US');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join the Chamber | Stellar City Chamber</title>
+    <link rel="stylesheet" href="styles/join-style.css">
+    <script src="scripts/join-scripts.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="site-name">
+            <h1>Stellar City Chamber</h1>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html" class="active">Join</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="hero-banner">
+        <div class="hero-content">
+            <h2>Start Your Growth Story</h2>
+            <p>Choose the membership that best fits your business goals.</p>
+            <a href="#membership-form" class="button">View Plans</a>
+        </div>
+    </div>
+
+    <main class="join-page">
+        <h2>Membership Application</h2>
+        <p>Complete the form below to begin the process of joining the Stellar City Chamber community and access exclusive benefits tailored for your business growth.</p>
+        
+        <section class="membership-info">
+            <h3>Choose Your Membership Level</h3>
+            <div class="card-grid">
+                
+                <div class="membership-card np-level">
+                    <img src="images/icon-np.png" alt="Non-Profit Icon" class="level-icon">
+                    <h4>Non-Profit</h4>
+                    <p class="price">$0/Year</p>
+                    <p>For non-profit organizations and government entities.</p>
+                    <button data-modal-target="modal-np">View Benefits</button>
+                </div>
+                <dialog id="modal-np" class="membership-modal">
+                    <div class="modal-content">
+                        <h5>Non-Profit Benefits (Free)</h5>
+                        <ul>
+                            <li>Basic listing in the directory.</li>
+                            <li>Access to monthly newsletter.</li>
+                            <li>Community support and visibility.</li>
+                        </ul>
+                        <button class="close-modal">Close</button>
+                    </div>
+                </dialog>
+                
+                <div class="membership-card bronze-level">
+                    <img src="images/icon-bronze.png" alt="Bronze Medal Icon" class="level-icon">
+                    <h4>Bronze</h4>
+                    <p class="price">$50/Year</p>
+                    <p>Ideal for new or small businesses needing foundational support.</p>
+                    <button data-modal-target="modal-bronze">View Benefits</button>
+                </div>
+                <dialog id="modal-bronze" class="membership-modal">
+                    <div class="modal-content">
+                        <h5>Bronze Benefits ($50/Year)</h5>
+                        <ul>
+                            <li>All Non-Profit benefits.</li>
+                            <li>One spotlight social media post per year.</li>
+                            <li>Discounted rates on facility rentals.</li>
+                        </ul>
+                        <button class="close-modal">Close</button>
+                    </div>
+                </dialog>
+                
+                <div class="membership-card silver-level">
+                    <img src="images/icon-silver.png" alt="Silver Medal Icon" class="level-icon">
+                    <h4>Silver</h4>
+                    <p class="price">$150/Year</p>
+                    <p>Designed for growing businesses looking for more exposure.</p>
+                    <button data-modal-target="modal-silver">View Benefits</button>
+                </div>
+                <dialog id="modal-silver" class="membership-modal">
+                    <div class="modal-content">
+                        <h5>Silver Benefits ($150/Year)</h5>
+                        <ul>
+                            <li>All Bronze benefits.</li>
+                            <li>Enhanced directory listing.</li>
+                            <li>Monthly seminar attendance.</li>
+                            <li>Exclusive networking events access.</li>
+                        </ul>
+                        <button class="close-modal">Close</button>
+                    </div>
+                </dialog>
+                
+                <div class="membership-card gold-level">
+                    <img src="images/icon-gold.png" alt="Gold Medal Icon" class="level-icon">
+                    <h4>Gold</h4>
+                    <p class="price">$250/Year</p>
+                    <p>Our top tier, maximizing business potential and influence.</p>
+                    <button data-modal-target="modal-gold">View Benefits</button>
+                </div>
+                <dialog id="modal-gold" class="membership-modal">
+                    <div class="modal-content">
+                        <h5>Gold Benefits ($250/Year)</h5>
+                        <ul>
+                            <li>All Silver benefits.</li>
+                            <li>Premium placement in the directory.</li>
+                            <li>Key sponsorship opportunities.</li>
+                            <li>Annual consultation with the Chamber President.</li>
+                        </ul>
+                        <button class="close-modal">Close</button>
+                    </div>
+                </dialog>
+            </div>
+        </section>
+
+        <form method="get" action="thankyou.html" class="chamber-form" id="membership-form">
+            <fieldset>
+                <legend>Applicant Information</legend>
+                <label for="fname">First Name*</label>
+                <input type="text" id="fname" name="fname" required title="First Name" autocomplete="given-name">
+                <label for="lname">Last Name*</label>
+                <input type="text" id="lname" name="lname" required title="Last Name" autocomplete="family-name">
+                <label for="title">Business Position Title*</label>
+                <input type="text" id="title" name="title" required title="Title must contain at least 7 characters (letters, spaces, or hyphens only)." pattern="[A-Za-z\s-]{7,}" autocomplete="off">
+                <label for="email">Email*</label>
+                <input type="email" id="email" name="email" required title="Email Address" placeholder="example@chamber.org" autocomplete="email">
+                <label for="phone">Mobile Phone*</label>
+                <input type="tel" id="phone" name="phone" required title="Mobile Phone Number" autocomplete="tel">
+            </fieldset>
+
+            <fieldset>
+                <legend>Business Information</legend>
+                <label for="orgname">Business/Organization Name*</label>
+                <input type="text" id="orgname" name="orgname" required title="Business/Organization Name" autocomplete="organization">
+                <label for="memlevel">Membership Level Selection*</label>
+                <select id="memlevel" name="memlevel" required title="Membership Level" autocomplete="off">
+                    <option value="" disabled selected>Select Level</option>
+                    <option value="NP">Non-Profit</option>
+                    <option value="Bronze">Bronze</option>
+                    <option value="Silver">Silver</option>
+                    <option value="Gold">Gold</option>
+                </select>
+                <label for="description">Business Description</label>
+                <textarea id="description" name="description" rows="4" title="Business Description"></textarea>
+            </fieldset>
+            
+            <input type="hidden" id="form-load-time" name="form-load-time">
+            <input type="submit" value="Apply to Join the Chamber">
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Stellar City Chamber | Last Modified: <span id="lastModified"></span></p>
+    </footer>
+
+    <script>
+        if ('WebSocket' in window) {
+            (function () {
+                function refreshCSS() {
+                    var sheets = [].slice.call(document.getElementsByTagName("link"));
+                    var head = document.getElementsByTagName("head")[0];
+                    for (var i = 0; i < sheets.length; ++i) {
+                        var elem = sheets[i];
+                        var parent = elem.parentElement || head;
+                        parent.removeChild(elem);
+                        var rel = elem.rel;
+                        if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+                            var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+                            elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+                        }
+                        parent.appendChild(elem);
+                    }
+                }
+                var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+                var address = protocol + window.location.host + window.location.pathname + '/ws';
+                var socket = new WebSocket(address);
+                socket.onmessage = function (msg) {
+                    if (msg.data == 'reload') window.location.reload();
+                    else if (msg.data == 'refreshcss') refreshCSS();
+                };
+                if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+                    console.log('Live reload enabled.');
+                    sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+                }
+            })();
+        } else {
+            console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.')
+        }
+    </script>
+</body>
+</html>
