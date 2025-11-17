@@ -3,9 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Apply for membership with the Stellar City Chamber. Choose from Non-Profit, Bronze, Silver, or Gold tiers and grow your business today.">
+    <meta name="author" content="[Karel Earl P. Ignacio]"> 
+    
     <title>Join the Chamber | Stellar City Chamber</title>
+    
+    <link rel="icon" href="images/logos/logo.png"> 
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles/base.css"> 
     <link rel="stylesheet" href="styles/join-style.css">
     <script src="scripts/join-scripts.js" defer></script>
+
+    <meta property="og:title" content="Join the Stellar City Chamber - Membership Application">
+    <meta property="og:description" content="Choose the perfect membership tier—Non-Profit, Bronze, Silver, or Gold—to elevate your business visibility and influence in Stellar City.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://example.com/join.html"> 
+    <meta property="og:image" content="https://example.com/images/city-sunset.jpg">
+    
 </head>
 <body>
     <header>
@@ -126,7 +145,7 @@
                 <label for="lname">Last Name*</label>
                 <input type="text" id="lname" name="lname" required title="Last Name" autocomplete="family-name">
                 <label for="title">Business Position Title*</label>
-                <input type="text" id="title" name="title" required title="Title must contain at least 7 characters (letters, spaces, or hyphens only)." pattern="[A-Za-z\s-]{7,}" autocomplete="off">
+                <input type="text" id="title" name="title" required title="Title must contain at least 7 characters (letters, spaces, or hyphens only)." pattern="[A-Za-z\s-]{7,}" autocomplete="organization-title">
                 <label for="email">Email*</label>
                 <input type="email" id="email" name="email" required title="Email Address" placeholder="example@chamber.org" autocomplete="email">
                 <label for="phone">Mobile Phone*</label>
@@ -158,39 +177,6 @@
         <p>&copy; 2025 Stellar City Chamber | Last Modified: <span id="lastModified"></span></p>
     </footer>
 
-    <script>
-        if ('WebSocket' in window) {
-            (function () {
-                function refreshCSS() {
-                    var sheets = [].slice.call(document.getElementsByTagName("link"));
-                    var head = document.getElementsByTagName("head")[0];
-                    for (var i = 0; i < sheets.length; ++i) {
-                        var elem = sheets[i];
-                        var parent = elem.parentElement || head;
-                        parent.removeChild(elem);
-                        var rel = elem.rel;
-                        if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
-                            var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
-                            elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
-                        }
-                        parent.appendChild(elem);
-                    }
-                }
-                var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
-                var address = protocol + window.location.host + window.location.pathname + '/ws';
-                var socket = new WebSocket(address);
-                socket.onmessage = function (msg) {
-                    if (msg.data == 'reload') window.location.reload();
-                    else if (msg.data == 'refreshcss') refreshCSS();
-                };
-                if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
-                    console.log('Live reload enabled.');
-                    sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
-                }
-            })();
-        } else {
-            console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.')
-        }
-    </script>
+    <script src="scripts/live-reload.js"></script> 
 </body>
 </html>
