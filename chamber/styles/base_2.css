@@ -1,0 +1,94 @@
+/* BASE.CSS - Global Styles (Consolidated & Cleaned) */
+
+/* FIX: Single :root definition. Darkened secondary color for WCAG AA contrast. */
+:root {
+    --primary-color: #00aaff;
+    --secondary-color: #0070b0; 
+    --light-color: #f0f0f0;
+    --dark-color: #1a1a2e;
+    --deep-dark: #0d0d1a;
+    --card-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    --border-radius: 12px;
+}
+
+/* Base Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+/* FIX: Single body definition with explicit color/background for legibility. */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--light-color); 
+    background-color: var(--deep-dark); 
+    display: flex;
+    flex-direction: column;
+}
+
+/* FIX: Single header definition. */
+header {
+    background-color: var(--dark-color); 
+    color: var(--light-color);
+    padding: 1rem 2rem;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    position: relative;
+}
+
+header h1 {
+    font-size: 1.5rem; 
+    color: var(--primary-color);
+    margin: 0; 
+}
+
+header nav ul {
+    list-style: none;
+    display: flex; 
+    padding: 0; 
+}
+
+header nav ul li a {
+    color: var(--light-color);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: block;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+    background-color: var(--primary-color); 
+    color: var(--dark-color);
+    box-shadow: 0 0 8px var(--primary-color);
+}
+
+/* FIX: Single main definition. */
+main {
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-grow: 1; 
+    width: 100%; 
+    color: var(--light-color);
+    background-color: var(--deep-dark);
+}
+
+/* FIX: Single footer definition. */
+footer {
+    background-color: var(--dark-color);
+    color: #999;
+    text-align: center;
+    padding: 1.5rem;
+    border-top: 1px solid #333;
+}
