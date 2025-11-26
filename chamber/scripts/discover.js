@@ -4,7 +4,7 @@ const listViewBtn = document.getElementById('list-view');
 const visitMessage = document.getElementById('last-visit-message');
 
 const DAYS_IN_MS = 86400000;
-let membersData = []; // Store the fetched data globally
+// membersData is no longer needed globally since cloning is removed
 
 function getMessage(days) {
     if (days < 1) {
@@ -28,27 +28,6 @@ function checkLastVisit() {
     }
 
     localStorage.setItem('lastVisit', today.toString());
-}
-
-function cloneAndAddCard(originalCard) {
-    // Find the original member data based on the card's content (e.g., title)
-    const title = originalCard.querySelector('h3').textContent;
-    const originalMember = membersData.find(m => m.name === title);
-    
-    if (originalMember) {
-        // Clone the member data and make it unique for the new card
-        const newMember = { ...originalMember, name: originalMember.name + ' (Cloned)' };
-
-        // Determine the next index for CSS Grid purposes
-        const currentIndex = memberCards.children.length;
-
-        // Create the new card and append it
-        const newCard = createMemberCard(newMember, currentIndex);
-        memberCards.appendChild(newCard);
-
-        // Re-run lazy loading for the new card's image
-        lazyLoadImages(newCard);
-    }
 }
 
 function createMemberCard(member, index) {
@@ -77,11 +56,8 @@ function createMemberCard(member, index) {
     const button = document.createElement('button');
     button.textContent = "Learn More";
     
-    // ⭐ MODIFICATION HERE: Add the cloneAndAddCard functionality
-    button.addEventListener('click', (e) => {
-        e.preventDefault(); // Stop the default link behavior
-        cloneAndAddCard(card);
-    });
+    // ⭐ RESTORATION HERE: Set the button to redirect to the member's URL
+    button.onclick = () => window.location.href = member.url; 
 
     card.appendChild(title);
     card.appendChild(address);
@@ -92,9 +68,9 @@ function createMemberCard(member, index) {
     return card;
 }
 
-// ⭐ MODIFICATION HERE: Accept an optional root element to observe (for new cards)
-function lazyLoadImages(root = memberCards) {
-    const images = root.querySelectorAll('img[data-src]');
+// ⭐ RESTORATION HERE: Removed optional root argument since we only process initial cards
+function lazyLoadImages() {
+    const images = document.querySelectorAll('img[data-src]');
     
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
@@ -120,10 +96,10 @@ async function loadMembers() {
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
-        membersData = await response.json(); // Store the data
+        const members = await response.json(); 
         
         memberCards.innerHTML = ''; 
-        membersData.slice(0, 8).forEach((member, index) => { 
+        members.slice(0, 8).forEach((member, index) => { 
             memberCards.appendChild(createMemberCard(member, index));
         });
         
