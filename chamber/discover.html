@@ -11,11 +11,9 @@
     <meta property="og:title" content="Discover the Members of Our Local Chamber of Commerce">
     <meta property="og:description" content="Explore and connect with over 50 local businesses and organizations that drive our community's growth and success. Find resources, services, and opportunities!">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://d0dge1003/chamber/images/chamber-logo-social.webp"> 
-    <meta property="og:url" content="https://d0dge1003/chamber/discover.html">
+    <meta property="og:image" content="https://D0dge1003.github.io/wdd231/chamber/images/chamber-logo-social.webp"> 
+    <meta property="og:url" content="https://D0dge1003.github.io/wdd231/chamber/discover.html">
     
-    <link rel="icon" href="images/logos/logo.png"> 
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -27,13 +25,13 @@
 </head>
 <body>
     <header>
-        <h1>Stellar City Chamber</h1>
+        <h1>Local Chamber</h1>
         <nav>
             <ul id="main-nav">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="discover.html" class="active">Discover</a></li>
                 <li><a href="directory.html">Directory</a></li>
                 <li><a href="join.html">Join</a></li>
+                <li><a href="discover.html" class="active">Discover</a></li>
             </ul>
         </nav>
     </header>
@@ -47,6 +45,8 @@
             <button id="grid-view" class="active-view">Grid View</button>
             <button id="list-view">List View</button>
         </div>
+        
+        <h2 id="member-directory" class="hidden-heading">Local Member Directory</h2>
 
         <section id="member-cards" class="grid"></section>
     </main>
@@ -56,6 +56,6 @@
         <p>Last Modified: <span id="last-modified"></span></p>
     </footer>
 
-    <script src="scripts/discover.js"></script>
+    <script src="scripts/discover.js" defer></script>
 </body>
 </html>

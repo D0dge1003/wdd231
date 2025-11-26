@@ -36,8 +36,21 @@
 .view-controls button.active-view {
     background-color: var(--primary-color);
     color: var(--dark-color);
-    border-color: var(--primary-color);
+    border-color: var(--secondary-color); 
     font-weight: bold;
+}
+
+/* Hidden heading for structural compliance */
+.hidden-heading {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
 }
 
 /* Grid Layout */
@@ -83,7 +96,7 @@
     object-fit: cover;
     border-radius: 8px;
     margin-bottom: 1rem;
-    aspect-ratio: 16 / 9; /* To prevent layout shift */
+    aspect-ratio: 16 / 9; 
 }
 
 .card button {
@@ -142,12 +155,12 @@
     flex-basis: 30%;
 }
 
-#member-cards.list .card p:last-of-type { /* Description */
-    display: none; /* Hide description in list view */
+#member-cards.list .card p:last-of-type { 
+    display: none; 
 }
 
 #member-cards.list .card img {
-    display: none; /* Hide image in list view */
+    display: none; 
 }
 
 #member-cards.list .card button {
