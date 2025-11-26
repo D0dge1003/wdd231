@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Plan | The RPG Evolution</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/site-plan.css">
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Project Site Plan</h1>
+        <h3>The History and Evolution of RPGs</h3>
+        <p>WDD 231 Individual Project</p>
+    </header>
+
+    <section class="section-box">
+        <h2>1. Site Name</h2>
+        <p><strong>Site Name:</strong> The RPG Chronicles</p>
+        <p><strong>Reasoning:</strong> I selected this name because "Chronicles" implies a historical record or narrative, which fits perfectly with the goal of documenting the evolution of the genre. It sounds adventurous yet educational, appealing to both gamers and history enthusiasts.</p>
+    </section>
+
+    <section class="section-box">
+        <h2>2. Site Purpose</h2>
+        <p><strong>Overview:</strong> This is a three-page informational website dedicated to the History and Evolution of Role-Playing Games (RPGs).</p>
+        <p>The site will focus on three main areas of RPGs across different platforms and eras:</p>
+        <ul>
+            <li><strong>Home/Overview:</strong> A brief introduction to the genre of Role-Playing Games and a navigation hub.</li>
+            <li><strong>The Foundation (Tabletop & Early Consoles):</strong> This page will cover the origins of the genre, focusing on foundational examples like <em>Dungeons & Dragons</em> and influential early video games (e.g., 80s/90s classics). It will detail core mechanics like character progression, narrative choice, and turn-based combat.</li>
+            <li><strong>The Modern Era (MMOs & Open World):</strong> This page will discuss the evolution of RPGs into large-scale online experiences and modern single-player open-world environments. It will compare design philosophies and note the impact of technology on narrative.</li>
+        </ul>
+        <p><strong>Technical Goals:</strong> The site will use HTML for structure, CSS for responsive design and visual presentation (including animations), and JavaScript for minor interactive elements like navigation.</p>
+    </section>
+
+    <section class="section-box">
+        <h2>3. Scenarios</h2>
+        <p>The following questions represent the needs of the target audience (gamers, students, and hobbyists):</p>
+        <ul>
+            <li>
+                <strong>Scenario 1:</strong> "I love modern games like <em>Skyrim</em> or <em>World of Warcraft</em>, but I don't know where the ideas came from. How did tabletop games like D&D influence the video games I play today?"
+            </li>
+            <li>
+                <strong>Scenario 2:</strong> "I am writing a paper on game design history. What are the key differences in mechanics between early turn-based RPGs and modern open-world action RPGs?"
+            </li>
+        </ul>
+    </section>
+
+    <section class="section-box">
+        <h2>4. Color Scheme</h2>
+        <p>The color scheme uses dark and navy blues with bright blue and white accents, providing a modern, high-contrast, and accessible look.</p>
+        
+        <div class="color-palette">
+            <div class="color-swatch" style="background-color: #0A192F; color: #FFFFFF;">
+                Primary<br>#0A192F<br>(Backgrounds)
+            </div>
+            <div class="color-swatch" style="background-color: #93C5FD; color: #0A192F;">
+                Secondary<br>#93C5FD<br>(Headers/Borders)
+            </div>
+            <div class="color-swatch" style="background-color: #3B82F6; color: #FFFFFF;">
+                Tertiary<br>#3B82F6<br>(Highlights/H1)
+            </div>
+            <div class="color-swatch" style="background-color: #FFFFFF; color: #0A192F;">
+                Text<br>#FFFFFF<br>(Body Text)
+            </div>
+        </div>
+    </section>
+
+    <section class="section-box">
+        <h2>5. Typography</h2>
+        
+        <div style="margin-bottom: 20px;">
+            <h3>Headings: Rajdhani</h3>
+            <p class="font-example-heading">The Quick Brown Fox Jumps Over The Lazy Dog</p>
+            <p><strong>Usage:</strong> Used for H1, H2, and H3 tags. Rajdhani is a modern, slightly futuristic sans-serif that is bold and attention-grabbing.</p>
+        </div>
+
+        <div>
+            <h3>Body Text: Inter</h3>
+            <p class="font-example-body">The quick brown fox jumps over the lazy dog. 1234567890.</p>
+            <p><strong>Usage:</strong> Used for paragraphs, lists, and general content. Inter is a clean, highly legible font optimized for user interfaces and screens, ensuring accessibility and a professional feel.</p>
+        </div>
+    </section>
+
+    <section class="section-box">
+        <h2>6. Wireframes</h2>
+        <p>Below are the layout plans for the Home Page on Mobile and Desktop devices.</p>
+
+        <div class="wireframe-container">
+            <div>
+                <h4 style="text-align: center;">Mobile View</h4>
+                <div class="wf-box wf-mobile">
+                    <div class="wf-header">Logo + Burger Menu</div>
+                    <div class="wf-hero">
+                        <small>Hero Image<br>Title<br>CTA Button</small>
+                    </div>
+                    <div class="wf-col" style="height: 50px;">Intro Text</div>
+                    <div class="wf-col" style="height: 50px;">Link: Foundation</div>
+                    <div class="wf-col" style="height: 50px;">Link: Modern Era</div>
+                    <div class="wf-footer">Footer / Socials</div>
+                </div>
+            </div>
+
+            <div>
+                <h4 style="text-align: center;">Desktop View</h4>
+                <div class="wf-box wf-desktop">
+                    <div class="wf-header" style="justify-content: space-between; padding: 0 20px;">
+                        <span>Logo</span>
+                        <span>Nav: Home | Foundation | Modern</span>
+                    </div>
+                    <div class="wf-hero" style="height: 150px;">
+                        <h2>History of RPGs</h2>
+                    </div>
+                    <div class="wf-content-grid">
+                        <div class="wf-col">
+                            <strong>Intro</strong><br>Genre Overview
+                        </div>
+                        <div class="wf-col">
+                            <strong>Era 1</strong><br>Tabletop & Console
+                        </div>
+                        <div class="wf-col">
+                            <strong>Era 2</strong><br>MMO & Open World
+                        </div>
+                    </div>
+                    <div class="wf-footer">Footer Info & Copyright</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+</body>
+</html>
