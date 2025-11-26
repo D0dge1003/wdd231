@@ -1,0 +1,58 @@
+[
+    {
+        "name": "Innovatech Solutions",
+        "address": "123 Tech Drive, Cityville",
+        "description": "Leading provider of cutting-edge software and IT consulting services.",
+        "image": "https://picsum.photos/seed/tech/600/338.webp",
+        "url": "#"
+    },
+    {
+        "name": "Blue Sky Bistro",
+        "address": "45 Market Street, Cityville",
+        "description": "A popular local restaurant featuring farm-to-table cuisine.",
+        "image": "https://picsum.photos/seed/bistro/600/338.webp",
+        "url": "#"
+    },
+    {
+        "name": "City General Hospital",
+        "address": "789 Health Ave, Cityville",
+        "description": "Providing comprehensive healthcare services to the community.",
+        "image": "https://picsum.photos/seed/hospital/600/338.webp",
+        "url": "#"
+    },
+    {
+        "name": "Riverfront Bank",
+        "address": "100 Financial Blvd, Cityville",
+        "description": "A trusted institution for all personal and business banking needs.",
+        "image": "https://picsum.photos/seed/bank/600/338.webp",
+        "url": "#"
+    },
+    {
+        "name": "Heritage Bookstore",
+        "address": "201 Reading Lane, Cityville",
+        "description": "Independent bookstore with a wide selection of new and used books.",
+        "image": "https://picsum.photos/seed/bookstore/600/338.webp",
+        "url": "#"
+    },
+    {
+        "name": "Global Logistics Co.",
+        "address": "303 Shipping Way, Cityville",
+        "description": "Specializing in local and international freight and supply chain management.",
+        "image": "https://picsum.photos/seed/logistics/600/338.webp",
+        "url": "#"
+    },
+    {
+        "name": "Precision Auto Repair",
+        "address": "404 Service Road, Cityville",
+        "description": "Full-service automotive repair and maintenance shop.",
+        "image": "https://picsum.photos/seed/auto/600/338.webp",
+        "url": "#"
+    },
+    {
+        "name": "Green Thumb Nursery",
+        "address": "505 Garden Path, Cityville",
+        "description": "Local nursery offering plants, gardening tools, and landscaping advice.",
+        "image": "https://picsum.photos/seed/nursery/600/338.webp",
+        "url": "#"
+    }
+]

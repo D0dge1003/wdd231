@@ -1,0 +1,200 @@
+/* Custom styles for Discover page */
+
+.hero {
+    background-color: var(--secondary-color);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+}
+
+#last-visit-message {
+    color: var(--light-color);
+    font-size: 1.2rem;
+}
+
+.view-controls {
+    text-align: right;
+    margin-bottom: 1rem;
+}
+
+.view-controls button {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    border: 1px solid var(--primary-color);
+    padding: 0.5rem 1rem;
+    margin-left: 0.5rem;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.view-controls button:hover {
+    background-color: var(--secondary-color);
+}
+
+.view-controls button.active-view {
+    background-color: var(--primary-color);
+    color: var(--dark-color);
+    border-color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* Grid Layout */
+#member-cards.grid {
+    display: grid;
+    gap: 20px;
+    /* Named Grid Areas for Mobile */
+    grid-template-areas: 
+        "card1"
+        "card2"
+        "card3"
+        "card4"
+        "card5"
+        "card6"
+        "card7"
+        "card8";
+}
+
+.card {
+    background-color: var(--dark-color);
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    box-shadow: var(--card-shadow);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.card p {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.card img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    aspect-ratio: 16 / 9; /* To prevent layout shift */
+}
+
+.card button {
+    background-color: var(--primary-color);
+    color: var(--dark-color);
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: auto;
+    transition: background-color 0.2s ease;
+}
+
+.card button:hover {
+    background-color: var(--light-color);
+}
+
+/* List Layout */
+#member-cards.list {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    border: 1px solid var(--dark-color);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#member-cards.list .card {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    padding: 0.75rem 1rem;
+    border-radius: 0;
+    box-shadow: none;
+    border-bottom: 1px solid var(--deep-dark);
+}
+
+#member-cards.list .card:nth-child(even) {
+    background-color: var(--deep-dark);
+}
+
+#member-cards.list .card:nth-child(odd) {
+    background-color: var(--dark-color);
+}
+
+#member-cards.list .card h3 {
+    flex-basis: 25%;
+    min-width: 150px;
+    margin: 0;
+    color: var(--light-color);
+}
+
+#member-cards.list .card p {
+    margin: 0;
+    flex-basis: 30%;
+}
+
+#member-cards.list .card p:last-of-type { /* Description */
+    display: none; /* Hide description in list view */
+}
+
+#member-cards.list .card img {
+    display: none; /* Hide image in list view */
+}
+
+#member-cards.list .card button {
+    margin-top: 0;
+    margin-left: auto;
+    padding: 0.5rem 0.75rem;
+}
+
+
+/* Media Queries for Desktop View */
+@media (min-width: 768px) {
+    /* Two-column layout with named grid areas */
+    #member-cards.grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "card1 card2"
+            "card3 card4"
+            "card5 card6"
+            "card7 card8";
+    }
+
+    /* Three-column layout with named grid areas */
+    #member-cards.grid.three-column {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 
+            "card1 card2 card3"
+            "card4 card5 card6"
+            "card7 card8 .";
+    }
+
+    /* Apply named areas */
+    .card:nth-child(1) { grid-area: card1; }
+    .card:nth-child(2) { grid-area: card2; }
+    .card:nth-child(3) { grid-area: card3; }
+    .card:nth-child(4) { grid-area: card4; }
+    .card:nth-child(5) { grid-area: card5; }
+    .card:nth-child(6) { grid-area: card6; }
+    .card:nth-child(7) { grid-area: card7; }
+    .card:nth-child(8) { grid-area: card8; }
+
+    /* Image Hover Effect */
+    .card img {
+        transition: transform 0.5s ease;
+    }
+
+    .card:hover img {
+        transform: scale(1.05);
+        opacity: 0.9;
+    }
+}
