@@ -31,14 +31,14 @@
     "id": "ff",
     "title": "Final Fantasy I",
     "text": "Square Enix's genre-saving classic that brought JRPGs to the masses with cinematic scope.",
-    "link": "#",
+    "link": "https://finalfantasypixelremaster.square-enix-games.com/en_GB/",
     "buttonText": "View Retrospective"
   },
   {
     "id": "dq",
     "title": "Dragon Quest",
     "text": "The first true console RPG, popularizing the concept of 'grinding' and structured narrative paths.",
-    "link": "#",
+    "link": "https://dragonquest.square-enix-games.com/?lng=us",
     "buttonText": "View Retrospective"
   },
   {
@@ -52,7 +52,7 @@
     "id": "skyrim",
     "title": "Elder Scrolls V: Skyrim",
     "text": "A benchmark for open-world design, non-linear quests, and environmental storytelling.",
-    "link": "#",
+    "link": "https://elderscrolls.bethesda.net/en",
     "buttonText": "Explore"
   },
   {
@@ -73,14 +73,14 @@
     "id": "indie",
     "title": "Indie Revival",
     "text": "Games like Disco Elysium and Undertale prove that deep narrative and mechanics can exist without AAA budgets.",
-    "link": "#",
+    "link": "https://www.thewitcher.com/ph/en",
     "buttonText": "Explore"
   },
   {
     "id": "ttrpg",
     "title": "Tabletop Renaissance",
     "text": "The resurgence of D&D and other TTRPGs, fueled by streaming and digital tools.",
-    "link": "#",
+    "link": "https://tabletoprenaissance.ca/",
     "buttonText": "Join a Game"
   },
   {
@@ -94,14 +94,14 @@
     "id": "loot",
     "title": "The Loot Grind",
     "text": "The mechanic of randomized, tiered gear drops (loot) driving long-term player engagement. Think Destiny and Borderlands.",
-    "link": "#",
+    "link": "https://lootandgrind.com/",
     "buttonText": "What is it?"
   },
   {
     "id": "narrative",
     "title": "Narrative Depth",
     "text": "Modern RPGs often tackle complex social and philosophical themes, pushing the boundaries of video game storytelling.",
-    "link": "#",
+    "link": "https://narrativedepth.com/",
     "buttonText": "Read Analysis"
   }
 ]
