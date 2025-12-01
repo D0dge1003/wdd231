@@ -1,0 +1,23 @@
+[
+  {
+    "id": "intro",
+    "title": "Genre Overview",
+    "text": "A brief introduction to the genre of Role-Playing Games and a navigation hub.",
+    "link": "#",
+    "buttonText": "Read Intro"
+  },
+  {
+    "id": "foundation",
+    "title": "The Foundation",
+    "text": "Tabletop origins (D&D) and early console classics. Character progression and turn-based combat.",
+    "link": "foundation.html",
+    "buttonText": "Explore Era 1"
+  },
+  {
+    "id": "modern",
+    "title": "The Modern Era",
+    "text": "The evolution into MMOs and massive open-world environments. Design philosophies and narrative.",
+    "link": "modern.html",
+    "buttonText": "Explore Era 2"
+  }
+]
