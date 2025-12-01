@@ -247,6 +247,18 @@ footer {
     color: #94a3b8;
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
 @media (max-width: 768px) {
     .nav-links {
         display: none;
@@ -281,4 +293,40 @@ footer {
         margin: 0;
         border-radius: 0;
     }
+}
+
+#welcome-modal {
+    background-color: var(--card-bg);
+    border: 2px solid var(--tertiary);
+    color: var(--text);
+    padding: 2rem;
+    border-radius: 4px;
+    max-width: 400px;
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+}
+
+#welcome-modal::backdrop {
+    background: rgba(0, 0, 0, 0.75);
+}
+
+#welcome-modal h2 {
+    color: var(--secondary);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+#welcome-modal p {
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+.visual-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    display: block;
+    margin: 1.5rem 0;
+    border-radius: 4px;
+    border: 1px solid var(--secondary);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }

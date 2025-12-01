@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You! | RPG Chronicles</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Lato:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        .data-display {
+            background-color: var(--card-bg);
+            padding: 2rem;
+            border-left: 4px solid var(--secondary);
+            margin-top: 2rem;
+        }
+        .data-display p {
+            margin-bottom: 0.5rem;
+        }
+        .data-display strong {
+            color: var(--tertiary);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/logo.png" alt="20-sided dice logo" class="logo-image">
+                <span>RPG CHRONICLES</span>
+            </div>
+            <div class="burger">&#9776;</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="foundation.html">The Foundation</a></li>
+                <li><a href="modern.html">The Modern Era</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="content-section">
+            <h1>Thank You for Submitting!</h1>
+            <p>We appreciate your interest in The RPG Chronicles. Here is the information we received:</p>
+
+            <div class="data-display" id="form-data-display">
+                </div>
+            
+            <a href="index.html" class="cta-btn" style="margin-top: 2rem;">Return Home</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 The RPG Chronicles. WDD 231 Individual Project.</p>
+        <a href="attributions.html" style="color: var(--secondary); margin-top: 0.5rem; display: block;">Image Attributions</a>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const display = document.getElementById('form-data-display');
+            const params = new URLSearchParams(window.location.search);
+            let output = '<h3>Your Submission Details</h3>';
+            
+            // Loop through URL Search Params and display valid entries
+            for (const [key, value] of params.entries()) {
+                // Display the form data
+                output += `<p><strong>${key.charAt(0).toUpperCase() + key.slice(1)}:</strong> ${value}</p>`;
+            }
+
+            if (params.size === 0) {
+                output += '<p>No data was submitted. Please return to the form page.</p>';
+            }
+
+            display.innerHTML = output;
+        });
+    </script>
+    
+    <script src="scripts/module.js" type="module"></script>
+</body>
+</html>

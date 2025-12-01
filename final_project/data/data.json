@@ -2,22 +2,106 @@
   {
     "id": "intro",
     "title": "Genre Overview",
-    "text": "A brief introduction to the genre of Role-Playing Games and a navigation hub.",
-    "link": "#",
+    "text": "A brief introduction to the genre of Role-Playing Games and a navigation hub. Learn about core mechanics like XP and stats.",
+    "link": "index.html",
     "buttonText": "Read Intro"
   },
   {
     "id": "foundation",
     "title": "The Foundation",
-    "text": "Tabletop origins (D&D) and early console classics. Character progression and turn-based combat.",
+    "text": "Tabletop origins (D&D) and early console classics. Explore character progression and turn-based combat systems.",
     "link": "foundation.html",
     "buttonText": "Explore Era 1"
   },
   {
     "id": "modern",
     "title": "The Modern Era",
-    "text": "The evolution into MMOs and massive open-world environments. Design philosophies and narrative.",
+    "text": "The evolution into MMOs and massive open-world environments. Discover action combat and player freedom.",
     "link": "modern.html",
     "buttonText": "Explore Era 2"
+  },
+  {
+    "id": "dnd",
+    "title": "Dungeons & Dragons",
+    "text": "The game that started it all. The original blueprint for stats, classes, and experience points.",
+    "link": "foundation.html#dnd-section",
+    "buttonText": "See Origins"
+  },
+  {
+    "id": "ff",
+    "title": "Final Fantasy I",
+    "text": "Square Enix's genre-saving classic that brought JRPGs to the masses with cinematic scope.",
+    "link": "#",
+    "buttonText": "View Retrospective"
+  },
+  {
+    "id": "dq",
+    "title": "Dragon Quest",
+    "text": "The first true console RPG, popularizing the concept of 'grinding' and structured narrative paths.",
+    "link": "#",
+    "buttonText": "View Retrospective"
+  },
+  {
+    "id": "mmo",
+    "title": "The MMO Boom",
+    "text": "The 2000s saw the explosion of persistent online worlds like WoW, EVE, and EverQuest. Massive scale.",
+    "link": "modern.html#mmo-section",
+    "buttonText": "Read Article"
+  },
+  {
+    "id": "skyrim",
+    "title": "Elder Scrolls V: Skyrim",
+    "text": "A benchmark for open-world design, non-linear quests, and environmental storytelling.",
+    "link": "#",
+    "buttonText": "Explore"
+  },
+  {
+    "id": "witcher",
+    "title": "The Witcher 3",
+    "text": "A modern masterpiece focused on morally grey narrative choices and mature themes in a fantasy setting.",
+    "link": "#",
+    "buttonText": "Explore"
+  },
+  {
+    "id": "action",
+    "title": "Action RPGs",
+    "text": "Combat driven by player reflexes and hitboxes rather than dice rolls. Think Diablo, Kingdom Hearts, and Souls-likes.",
+    "link": "modern.html#combat-section",
+    "buttonText": "Learn More"
+  },
+  {
+    "id": "indie",
+    "title": "Indie Revival",
+    "text": "Games like Disco Elysium and Undertale prove that deep narrative and mechanics can exist without AAA budgets.",
+    "link": "#",
+    "buttonText": "Explore"
+  },
+  {
+    "id": "ttrpg",
+    "title": "Tabletop Renaissance",
+    "text": "The resurgence of D&D and other TTRPGs, fueled by streaming and digital tools.",
+    "link": "#",
+    "buttonText": "Join a Game"
+  },
+  {
+    "id": "crpg",
+    "title": "CRPG Revival",
+    "text": "Classic PC-style RPGs making a comeback, focusing on party management and deep dialogue trees.",
+    "link": "#",
+    "buttonText": "View Titles"
+  },
+  {
+    "id": "loot",
+    "title": "The Loot Grind",
+    "text": "The mechanic of randomized, tiered gear drops (loot) driving long-term player engagement. Think Destiny and Borderlands.",
+    "link": "#",
+    "buttonText": "What is it?"
+  },
+  {
+    "id": "narrative",
+    "title": "Narrative Depth",
+    "text": "Modern RPGs often tackle complex social and philosophical themes, pushing the boundaries of video game storytelling.",
+    "link": "#",
+    "buttonText": "Read Analysis"
   }
 ]

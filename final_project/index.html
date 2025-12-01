@@ -3,43 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The RPG Chronicles | ...</title>
+
+    <title>The RPG Chronicles | History and Evolution of Role-Playing Games</title> 
+
+    <meta name="description" content="Explore the deep history of RPGs, from Dungeons & Dragons and early console games to modern open-world masterpieces and MMORPGs.">
+    
+    <meta name="author" content="Karel Earl P. Ignacio"> 
+
+    <meta property="og:title" content="The RPG Chronicles">
+    <meta property="og:description" content="A comprehensive history of the role-playing game genre.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="[Insert Your Final Site URL Here]">
+
+    <link rel="icon" href="images/logo.png" type="image/x-icon"> 
+
     <link rel="stylesheet" href="styles/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Lato:wght@400;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
     <header>
-        <nav>
-            <div class="logo">
-                <img src="images/logo.png" alt="20-sided dice logo" class="logo-image">
-                <span>RPG CHRONICLES</span>
-            </div>
-            <div class="burger">&#9776;</div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="foundation.html">The Foundation</a></li>
-                <li><a href="modern.html">The Modern Era</a></li>
-            </ul>
-        </nav>
-    </header>
+    <nav>
+        <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="RPG Chronicles dice logo" class="logo-image">
+            <span>RPG CHRONICLES</span>
+        </a>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1>HISTORY OF RPGS</h1>
-            <p>From tabletop dice rolls to immersive virtual worlds.</p>
-            <a href="foundation.html" class="cta-btn">Start the Journey</a>
-        </div>
-    </section>
+        <div class="burger" role="button" aria-label="Menu" aria-expanded="false">&#9776;</div> 
 
-    <main class="container">
-        <div id="dynamic-grid" class="info-grid"></div>
-    </main>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="foundation.html">The Foundation</a></li>
+            <li><a href="modern.html">The Modern Era</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>History of RPGs</h1>
+        <p>From tabletop dice rolls to immersive virtual worlds.</p>
+        <a href="foundation.html" class="cta-btn">Start the Journey</a>
+    </div>
+</section>
+
+<main class="container">
+    <section id="dynamic-grid" class="info-grid">
+        <h2 class="visually-hidden">Key Eras and Concepts</h2>
+        </section>
+</main>
+
+    <dialog id="welcome-modal">
+        <h2>Welcome Back, Traveler!</h2>
+        <p>It's been **<span id="last-visit-days">0</span> days** since your last foray into the RPG Chronicles. Continue your quest for knowledge!</p>
+        <button class="cta-btn close-button">Close</button>
+    </dialog>
 
     <footer>
-        <p>&copy; 2025 The RPG Chronicles. WDD 231 Individual Project.</p>
+        <p>&copy; 2025 The RPG Chronicles — WDD 231 Individual Project</p>
+        <a href="attributions.html" style="color: var(--secondary); margin-top: 0.5rem; display: block;">Image Attributions</a>
     </footer>
 
-    <script src="scripts/script.js"></script>
+    <script src="scripts/module.js" type="module"></script>
 </body>
 </html>

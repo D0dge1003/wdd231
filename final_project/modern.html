@@ -3,18 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The RPG Chronicles | ...</title>
+    <title>The RPG Chronicles | The Modern Era</title>
+    <meta name="description" content="A look at modern RPG design, covering MMORPGs, massive open worlds, action combat, and cinematic storytelling.">
+    <meta name="author" content="Karel Earl P. Ignacio">
+    <meta property="og:title" content="The Modern Era of RPGs">
+    <link rel="icon" href="images/logo.png" type="image/x-icon">
+
     <link rel="stylesheet" href="styles/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Lato:wght@400;600&display=swap" rel="stylesheet">
 </head>
-
+<body> 
     <header>
         <nav>
             <div class="logo">
                 <img src="images/logo.png" alt="20-sided dice logo" class="logo-image">
                 <span>RPG CHRONICLES</span>
             </div>
-            <div class="burger">&#9776;</div>
+            
+            <div class="burger" role="button" aria-label="Menu" aria-expanded="false">&#9776;</div>
+            
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="foundation.html">The Foundation</a></li>
@@ -33,14 +40,13 @@
 
         <section class="content-section">
             <h2>The Rise of MMORPGs 🌐</h2>
-            <img src="images/wow.jpg" alt="A depiction of a large-scale multiplayer online raid battle." class="visual-image">
-            <p>The introduction of high-speed internet allowed the RPG party to scale indefinitely. Games like EverQuest and World of Warcraft changed the social landscape of gaming. The "party" was no longer just 4 friends, but guilds of hundreds working together in real-time economies and persistent shared worlds.</p>
+            <img src="images/wow.jpg" alt="A depiction of a large-scale multiplayer online raid battle." class="visual-image" loading="lazy"> <p>The introduction of high-speed internet allowed the RPG party to scale indefinitely. Games like EverQuest and World of Warcraft changed the social landscape of gaming. The "party" was no longer just 4 friends, but guilds of hundreds working together in real-time economies and persistent shared worlds.</p>
             
             <h3>Key MMO Innovations:</h3>
             <ul>
-                <li><strong>The Subscription Model:</strong> Proving the genre could support massive, continuous development budgets.</li>
-                <li><strong>PvP & PvE Ladders:</strong> Creating both collaborative and competitive endgame content to ensure longevity.</li>
-                <li><strong>Persistent Worlds:</strong> The world continued to exist and evolve even when the player logged off.</li>
+                <li>**The Subscription Model:** Proving the genre could support massive, continuous development budgets.</li>
+                <li>**PvP & PvE Ladders:** Creating both collaborative and competitive endgame content to ensure longevity.</li>
+                <li>**Persistent Worlds:** The world continued to exist and evolve even when the player logged off.</li>
             </ul>
         </section>
 
@@ -65,12 +71,41 @@
                 </div>
             </div>
         </section>
+
+        <hr>
+
+        <section class="content-section">
+            <h2>Join the Adventure! 📝</h2>
+            <p>Sign up to receive updates on the history of RPGs and future articles.</p>
+            
+            <form method="get" action="thanks.html" id="rpg-form" style="max-width: 500px; margin-top: 1.5rem;">
+                <label for="genre" style="display: block; margin-top: 1rem; color: var(--secondary);">Favorite RPG Genre:</label>
+                <select id="genre" name="genre" required style="width: 100%; padding: 0.75rem; background-color: var(--primary); border: 1px solid var(--secondary); color: var(--text);">
+                    <option value="" disabled selected>Select a Genre</option>
+                    <option value="MMO">MMORPG</option>
+                    <option value="JRPG">JRPG</option>
+                    <option value="WRPG">Western RPG / Open World</option>
+                    <option value="Action">Action RPG / Souls-like</option>
+                </select>
+
+                <label for="email" style="display: block; margin-top: 1rem; color: var(--secondary);">Your Email:</label>
+                <input type="email" id="email" name="email" required placeholder="name@example.com" style="width: 100%; padding: 0.75rem; background-color: var(--primary); border: 1px solid var(--secondary); color: var(--text);">
+                
+                <label for="subscribe" style="display: block; margin-top: 1rem; color: var(--secondary);">
+                    <input type="checkbox" id="subscribe" name="subscribe" value="yes" checked>
+                    Yes, subscribe me to the newsletter!
+                </label>
+                
+                <button type="submit" class="cta-btn" style="margin-top: 1.5rem;">Submit</button>
+            </form>
+        </section>
     </main>
 
     <footer>
         <p>&copy; 2025 The RPG Chronicles. WDD 231 Individual Project.</p>
+        <a href="attributions.html" style="color: var(--secondary); margin-top: 0.5rem; display: block;">Image Attributions</a>
     </footer>
 
-    <script src="scripts/script.js"></script>
+    <script src="scripts/module.js" type="module"></script>
 </body>
 </html>
